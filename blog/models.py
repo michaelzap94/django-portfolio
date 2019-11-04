@@ -6,3 +6,9 @@ class Blog(models.Model):
     pub_date = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to='images/')  # upload_to='' specify where to upload the image to.
     body = models.TextField()
+
+    def summary(self):
+        return self.body[:100]
+
+    def pub_date_pretty(self):
+        return self.pub_date.strftime('%e %b %Y')
