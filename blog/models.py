@@ -7,6 +7,11 @@ class Blog(models.Model):
     image = models.ImageField(upload_to='images/')  # upload_to='' specify where to upload the image to.
     body = models.TextField()
 
+    #NAME TO USE WHEN ACCESSING OBJECT(e.g: WHEN DJANGO lists the objects)
+    def __str__(self):
+        return self.title
+
+    #functions for specific Records in the Table Blog.
     def summary(self):
         return self.body[:100]
 
