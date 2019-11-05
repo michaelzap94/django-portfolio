@@ -135,3 +135,7 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#ADD THIS SO YOU CAN MAKE YOUR PROJECT AVAILABLE TO YOUR HOME NETWORK:
+#THEN, it can be access through your phone
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']#ADD YOUR IP HERE.
